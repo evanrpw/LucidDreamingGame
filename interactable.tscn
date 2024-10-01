@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1impaw7i5ffl"]
+
+[ext_resource type="Script" path="res://interactable.gd" id="1_bopsm"]
+[ext_resource type="LabelSettings" uid="uid://2ko7alo2i30u" path="res://text.tres" id="2_4mqat"]
+
+[node name="Interactable" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_bopsm")
+action_name = "read"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = -4.0
+offset_right = 13.0
+offset_bottom = 1.0
+grow_horizontal = 2
+label_settings = ExtResource("2_4mqat")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
