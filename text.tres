@@ -1,9 +1,10 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://2ko7alo2i30u"]
 
-[ext_resource type="FontFile" uid="uid://dxobgyagin5av" path="res://assets/spleen/spleen-32x64.otf" id="1_y2nw6"]
+[ext_resource type="FontFile" uid="uid://xtlt4ufkaouf" path="res://assets/compagnon/Compagnon-Medium.otf" id="1_ag50s"]
 
 [resource]
-font = ExtResource("1_y2nw6")
+line_spacing = 1.0
+font = ExtResource("1_ag50s")
 font_size = 3
 outline_size = 1
 outline_color = Color(0.133333, 0.12549, 0.203922, 1)

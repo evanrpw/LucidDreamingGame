@@ -16,7 +16,9 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 
 [display]
 
-window/stretch/scale=8.0
+window/stretch/mode="canvas_items"
+window/defaults/default_clear_color=Color(0.3, 0.3, 0.3, 1)
+window/transparent_background=false
 
 [input]
 
@@ -60,3 +62,4 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/transparent_background=false

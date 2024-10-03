@@ -2,7 +2,7 @@ extends Area2D
 class_name Interactable
 
 @export var action_name: String = "interact"
-@onready var label : Label = $Label
+@export var label : Label
 
 func _ready() -> void:
 	if label != null:
