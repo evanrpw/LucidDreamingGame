@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d1impaw7i5ffl" path="res://interactable.tscn" id="2_o36ag"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wbugs"]
-radius = 2.0
+radius = 4.0
 
 [node name="Sign" type="Node2D" node_paths=PackedStringArray("sign_text_label")]
 y_sort_enabled = true

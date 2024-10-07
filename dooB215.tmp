@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxqlvhu11vuwh"]
+
+[ext_resource type="Script" path="res://door.gd" id="1_3s2h5"]
+[ext_resource type="PackedScene" uid="uid://d1impaw7i5ffl" path="res://interactable.tscn" id="1_gh51r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbugs"]
+radius = 2.0
+
+[node name="Door" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_3s2h5")
+
+[node name="Interactable" parent="." instance=ExtResource("1_gh51r")]
+action_name = "enter"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+position = Vector2(4, 4)
+shape = SubResource("CircleShape2D_wbugs")
