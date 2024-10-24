@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d066rg5b0vbpo"]
+[gd_scene load_steps=7 format=3 uid="uid://d066rg5b0vbpo"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_qj48g"]
 [ext_resource type="PackedScene" uid="uid://dchxbx8jb3xy5" path="res://player.tscn" id="2_nccbl"]
 [ext_resource type="PackedScene" uid="uid://dpoqpjlw5mke2" path="res://level_1.tscn" id="4_nqj4l"]
 [ext_resource type="PackedScene" uid="uid://djefnfiyixdg2" path="res://camera_2d.tscn" id="5_7ckw1"]
+[ext_resource type="PackedScene" uid="uid://c4o5gq36jaerp" path="res://level_2.tscn" id="5_e1jid"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hasxv"]
 polygon = PackedVector2Array(-3, -2, -2, -2, -2, -3, 2, -3, 2, -2, 3, -2, 3, 2, 2, 2, 2, 3, -2, 3, -2, 2, -3, 2)
@@ -28,6 +29,22 @@ occluder_light_mask = 2
 
 [node name="Level 1" parent="." instance=ExtResource("4_nqj4l")]
 
+[node name="Door" parent="Level 1/Objects" index="0" node_paths=PackedStringArray("destination")]
+destination = NodePath("../../../Level 2")
+
+[node name="SignText" parent="Level 1/Objects/Sign4" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Level 2" parent="." instance=ExtResource("5_e1jid")]
+visible = false
+position = Vector2(104, 0)
+
+[node name="Door" parent="Level 2/Objects" index="1" node_paths=PackedStringArray("destination")]
+destination = NodePath("../../../Level 1")
+
 [editable path="Player/Camera2D"]
 [editable path="Level 1"]
+[editable path="Level 1/Objects/Door"]
 [editable path="Level 1/Objects/Sign4"]
+[editable path="Level 2"]
+[editable path="Level 2/Objects/Door"]

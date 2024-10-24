@@ -23,7 +23,6 @@ tile_set = ExtResource("3_sg1qe")
 [node name="Door" parent="Objects" node_paths=PackedStringArray("source") instance=ExtResource("3_fwcif")]
 position = Vector2(88, -24)
 source = NodePath("../..")
-destination = "res://level_2.tscn"
 
 [node name="Sign" parent="Objects" instance=ExtResource("3_2q4go")]
 position = Vector2(-24, -16)

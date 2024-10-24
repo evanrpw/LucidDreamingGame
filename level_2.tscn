@@ -16,7 +16,7 @@ tile_set = ExtResource("1_bf1sl")
 [node name="Objects" type="TileMapLayer" parent="."]
 y_sort_enabled = true
 position = Vector2(-32, 16)
-tile_map_data = PackedByteArray("AAABAAEAAwAAAAAAAAD9//7/AwACAAAAAAAHAP//AwAAAAAAAAAIAP7/AwAAAAAAAAAJAP7/AwAAAAAAAAAJAAEAAwAAAAAAAAAJAAAAAwAAAAAAAAAIAAIAAwAAAAAAAAAGAAIAAwAAAAAAAAAEAP//AwAAAAAAAAD//wEAAwACAAAAAAA=")
+tile_map_data = PackedByteArray("AAABAAEAAwAAAAAAAAD9//7/AwACAAAAAAAHAP//AwAAAAAAAAAIAP7/AwAAAAAAAAAJAP7/AwAAAAAAAAAJAAEAAwAAAAAAAAAJAAAAAwAAAAAAAAAIAAIAAwAAAAAAAAAGAAIAAwAAAAAAAAAEAP//AwAAAAAAAAA=")
 tile_set = ExtResource("1_bf1sl")
 
 [node name="Sign" parent="Objects" instance=ExtResource("3_qtbuj")]
@@ -26,7 +26,6 @@ sign_text = Array[String](["Another room!"])
 [node name="Door" parent="Objects" node_paths=PackedStringArray("source") instance=ExtResource("4_srrcp")]
 position = Vector2(32, -24)
 source = NodePath("../..")
-destination = "res://level_1.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -28.0

@@ -19,14 +19,31 @@ func _physics_process(_delta):
 		velocity = lerp(velocity, Vector2.ZERO, friction)
 	move_and_slide()
 	
-func change_room(source, destination):
-	get_tree().root.get_child(0).add_child(destination)
-	if is_instance_valid(source):
-		source.queue_free()
-	position = Vector2(4,4)
+#func change_room(source, destination):
+	#if !destination.get_parent():
+		#get_tree().root.get_child(0).add_child(destination) # add new level
+	#if is_instance_valid(source):
+		#source.queue_free() # remove old level
+	#position = Vector2(4,4)
 	
+	# set camera bounds
+	#var tile_map = destination.get_node("Terrain")
+	#var tile_rect = tile_map.get_used_rect()
+	#var top_left = tile_map.map_to_local(tile_rect.position)
+	#var size = tile_map.map_to_local(tile_rect.size)-Vector2(8,8)
+	#camera.update_bounds(top_left+tile_map.position, top_left+tile_map.position+size)
+
+func change_room(source, destination):
+	position = destination.position + Vector2(4,4)
+	if source:
+		source.hide()
+	if destination:
+		destination.show()
+	
+	# set camera bounds
 	var tile_map = destination.get_node("Terrain")
 	var tile_rect = tile_map.get_used_rect()
-	var top_left = tile_map.map_to_local(tile_rect.position)
-	var size = tile_map.map_to_local(tile_rect.size)-Vector2(8,8)
+	var top_left = tile_map.map_to_local(tile_rect.position) + destination.position
+	var size = tile_map.map_to_local(tile_rect.size)-Vector2(8,8) + destination.position
 	camera.update_bounds(top_left+tile_map.position, top_left+tile_map.position+size)
+	print(top_left)
