@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d066rg5b0vbpo"]
+[gd_scene load_steps=8 format=3 uid="uid://d066rg5b0vbpo"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_qj48g"]
 [ext_resource type="PackedScene" uid="uid://dchxbx8jb3xy5" path="res://player.tscn" id="2_nccbl"]
 [ext_resource type="PackedScene" uid="uid://dpoqpjlw5mke2" path="res://level_1.tscn" id="4_nqj4l"]
 [ext_resource type="PackedScene" uid="uid://djefnfiyixdg2" path="res://camera_2d.tscn" id="5_7ckw1"]
 [ext_resource type="PackedScene" uid="uid://c4o5gq36jaerp" path="res://level_2.tscn" id="5_e1jid"]
+[ext_resource type="PackedScene" uid="uid://c4ftpxddp56o4" path="res://level_3.tscn" id="6_xdebc"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hasxv"]
 polygon = PackedVector2Array(-3, -2, -2, -2, -2, -3, 2, -3, 2, -2, 3, -2, 3, 2, 2, 2, 2, 3, -2, 3, -2, 2, -3, 2)
@@ -29,8 +30,13 @@ occluder_light_mask = 2
 
 [node name="Level 1" parent="." instance=ExtResource("4_nqj4l")]
 
-[node name="Door" parent="Level 1/Objects" index="0" node_paths=PackedStringArray("destination")]
+[node name="Door" parent="Level 1/Objects" index="0" node_paths=PackedStringArray("destination", "destination_door")]
 destination = NodePath("../../../Level 2")
+destination_door = NodePath("../../../Level 2/Objects/Door")
+
+[node name="Door2" parent="Level 1/Objects" index="1" node_paths=PackedStringArray("destination", "destination_door")]
+destination = NodePath("../../../Level 3")
+destination_door = NodePath("../../../Level 3/Objects/Door")
 
 [node name="SignText" parent="Level 1/Objects/Sign4" index="0"]
 metadata/_edit_use_anchors_ = true
@@ -39,8 +45,17 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(104, 0)
 
-[node name="Door" parent="Level 2/Objects" index="1" node_paths=PackedStringArray("destination")]
+[node name="Door" parent="Level 2/Objects" index="1" node_paths=PackedStringArray("destination", "destination_door")]
 destination = NodePath("../../../Level 1")
+destination_door = NodePath("../../../Level 1/Objects/Door")
+
+[node name="Level 3" parent="." instance=ExtResource("6_xdebc")]
+visible = false
+position = Vector2(104, 80)
+
+[node name="Door" parent="Level 3/Objects" index="1" node_paths=PackedStringArray("destination", "destination_door")]
+destination = NodePath("../../../Level 1")
+destination_door = NodePath("../../../Level 1/Objects/Door2")
 
 [editable path="Player/Camera2D"]
 [editable path="Level 1"]
@@ -48,3 +63,5 @@ destination = NodePath("../../../Level 1")
 [editable path="Level 1/Objects/Sign4"]
 [editable path="Level 2"]
 [editable path="Level 2/Objects/Door"]
+[editable path="Level 3"]
+[editable path="Level 3/Objects/Sign"]

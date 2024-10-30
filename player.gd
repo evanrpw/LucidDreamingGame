@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	if starting_room != null:
-		change_room(null, starting_room)
+		change_room(null, starting_room, null)
 
 func _physics_process(_delta):
 	var movement_vector = Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
@@ -33,12 +33,15 @@ func _physics_process(_delta):
 	#var size = tile_map.map_to_local(tile_rect.size)-Vector2(8,8)
 	#camera.update_bounds(top_left+tile_map.position, top_left+tile_map.position+size)
 
-func change_room(source, destination):
-	position = destination.position + Vector2(4,4)
-	if source:
-		source.hide()
-	if destination:
-		destination.show()
+func change_room(source, destination, destination_door):
+	#position = destination.position + Vector2(4,4)
+
+	if destination_door == null:
+		position = destination.position + Vector2(4,4)
+	else:
+		print(destination.position)
+		print(destination_door.position)
+		position = destination.position + destination_door.position + Vector2(4,4)
 	
 	# set camera bounds
 	var tile_map = destination.get_node("Terrain")
@@ -46,4 +49,10 @@ func change_room(source, destination):
 	var top_left = tile_map.map_to_local(tile_rect.position) + destination.position
 	var size = tile_map.map_to_local(tile_rect.size)-Vector2(8,8) + destination.position
 	camera.update_bounds(top_left+tile_map.position, top_left+tile_map.position+size)
-	print(top_left)
+
+	if destination:
+		destination.show()
+	if source:
+		source.hide()
+
+	
