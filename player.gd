@@ -7,6 +7,9 @@ extends CharacterBody2D
 @onready var camera: Camera2D = $Camera2D
 @export var starting_room: Node2D
 
+@export var dialog_label: Label
+@export var dialog: Control
+
 func _ready() -> void:
 	if starting_room != null:
 		change_room(null, starting_room, null)

@@ -18,6 +18,6 @@ func interact(_interactor: Node2D) -> void:
 		#end_interaction()
 		#interactable.label.show()
 
-func end_interaction() -> void:
+func end_interaction(_interactor) -> void:
 	sign_text_label.text = ""
 	text_index = 0

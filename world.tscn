@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d066rg5b0vbpo"]
+[gd_scene load_steps=9 format=3 uid="uid://d066rg5b0vbpo"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_qj48g"]
 [ext_resource type="PackedScene" uid="uid://dchxbx8jb3xy5" path="res://player.tscn" id="2_nccbl"]
+[ext_resource type="PackedScene" uid="uid://dot43xvjg0gi8" path="res://dialog.tscn" id="4_6fwde"]
 [ext_resource type="PackedScene" uid="uid://dpoqpjlw5mke2" path="res://level_1.tscn" id="4_nqj4l"]
 [ext_resource type="PackedScene" uid="uid://djefnfiyixdg2" path="res://camera_2d.tscn" id="5_7ckw1"]
 [ext_resource type="PackedScene" uid="uid://c4o5gq36jaerp" path="res://level_2.tscn" id="5_e1jid"]
@@ -15,11 +16,21 @@ y_sort_enabled = true
 script = ExtResource("1_qj48g")
 clear_color = Color(0.133333, 0.12549, 0.203922, 1)
 
-[node name="Player" parent="." node_paths=PackedStringArray("starting_room") instance=ExtResource("2_nccbl")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Dialog" parent="CanvasLayer" instance=ExtResource("4_6fwde")]
+visible = false
+
+[node name="Label" parent="CanvasLayer/Dialog/VBoxContainer" index="1"]
+text = ""
+
+[node name="Player" parent="." node_paths=PackedStringArray("starting_room", "dialog_label", "dialog") instance=ExtResource("2_nccbl")]
 y_sort_enabled = true
 position = Vector2(4, 4)
 friction = 0.2
 starting_room = NodePath("../Level 1")
+dialog_label = NodePath("../CanvasLayer/Dialog/VBoxContainer/Label")
+dialog = NodePath("../CanvasLayer/Dialog")
 
 [node name="Camera2D" parent="Player" instance=ExtResource("5_7ckw1")]
 zoom = Vector2(8, 8)
@@ -29,17 +40,6 @@ occluder = SubResource("OccluderPolygon2D_hasxv")
 occluder_light_mask = 2
 
 [node name="Level 1" parent="." instance=ExtResource("4_nqj4l")]
-
-[node name="Door" parent="Level 1/Objects" index="0" node_paths=PackedStringArray("destination", "destination_door")]
-destination = NodePath("../../../Level 2")
-destination_door = NodePath("../../../Level 2/Objects/Door")
-
-[node name="Door2" parent="Level 1/Objects" index="1" node_paths=PackedStringArray("destination", "destination_door")]
-destination = NodePath("../../../Level 3")
-destination_door = NodePath("../../../Level 3/Objects/Door")
-
-[node name="SignText" parent="Level 1/Objects/Sign4" index="0"]
-metadata/_edit_use_anchors_ = true
 
 [node name="Level 2" parent="." instance=ExtResource("5_e1jid")]
 visible = false
@@ -57,10 +57,8 @@ position = Vector2(104, 80)
 destination = NodePath("../../../Level 1")
 destination_door = NodePath("../../../Level 1/Objects/Door2")
 
+[editable path="CanvasLayer/Dialog"]
 [editable path="Player/Camera2D"]
-[editable path="Level 1"]
-[editable path="Level 1/Objects/Door"]
-[editable path="Level 1/Objects/Sign4"]
 [editable path="Level 2"]
 [editable path="Level 2/Objects/Door"]
 [editable path="Level 3"]

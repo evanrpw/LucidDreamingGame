@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://dpoqpjlw5mke2"]
+[gd_scene load_steps=6 format=4 uid="uid://dpoqpjlw5mke2"]
 
 [ext_resource type="PackedScene" uid="uid://bt4jtdmq0g0ib" path="res://sign.tscn" id="3_2q4go"]
 [ext_resource type="PackedScene" uid="uid://cxqlvhu11vuwh" path="res://door.tscn" id="3_fwcif"]
 [ext_resource type="TileSet" uid="uid://dnsbxrcfbqv08" path="res://tileset.tres" id="3_sg1qe"]
 [ext_resource type="Texture2D" uid="uid://sx1ik0hncdtr" path="res://assets/light.png" id="4_2uf06"]
+[ext_resource type="PackedScene" uid="uid://c6j3wg2xgiwd5" path="res://npc.tscn" id="5_5ww28"]
 
 [node name="Level 1" type="Node2D"]
 y_sort_enabled = true
@@ -29,19 +30,15 @@ source = NodePath("../..")
 
 [node name="Sign" parent="Objects" instance=ExtResource("3_2q4go")]
 position = Vector2(-112, 0)
-sign_text = Array[String](["This sign is on the left"])
 
 [node name="Sign2" parent="Objects" instance=ExtResource("3_2q4go")]
 position = Vector2(-104, 0)
-sign_text = Array[String](["This sign is on the right"])
 
 [node name="Sign3" parent="Objects" instance=ExtResource("3_2q4go")]
 position = Vector2(-40, -8)
-sign_text = Array[String](["Hello!", "This is a sign :)"])
 
 [node name="Sign4" parent="Objects" instance=ExtResource("3_2q4go")]
 position = Vector2(-8, 80)
-sign_text = Array[String](["If you or a loved one was diagnosed with Mesothelioma", "you may be entitled to financial compensation.", "Mesothelioma is a rare cancer linked to asbestos exposure.", "Exposure to asbestos in the Navy, shipyards,", "mills, heating, construction or the automotive industries may put you at risk.", "Please don't wait, call 1-800-99 LAW USA", "today for a free legal consultation and financial information packet.", "Mesothelioma patients call now! 1-800-99 LAW USA"])
 
 [node name="SignText" parent="Objects/Sign4" index="0"]
 offset_left = -24.0
@@ -68,5 +65,9 @@ shadow_enabled = true
 shadow_item_cull_mask = 3
 texture = ExtResource("4_2uf06")
 texture_scale = 0.3
+
+[node name="NPC" parent="Objects" instance=ExtResource("5_5ww28")]
+position = Vector2(8, 8)
+dialog_text = Array[String](["Hello, I'm a box.", "Ignore my character portrait I promise I'm a box shhhhhhhh", "Goodbye"])
 
 [editable path="Objects/Sign4"]

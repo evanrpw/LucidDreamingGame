@@ -20,7 +20,6 @@ tile_set = ExtResource("1_bf1sl")
 
 [node name="Sign" parent="Objects" instance=ExtResource("3_qtbuj")]
 position = Vector2(8, 32)
-sign_text = Array[String](["ROOM 2"])
 
 [node name="Door" parent="Objects" node_paths=PackedStringArray("source") instance=ExtResource("4_srrcp")]
 source = NodePath("../..")
