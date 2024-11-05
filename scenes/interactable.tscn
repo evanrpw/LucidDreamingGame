@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1impaw7i5ffl"]
 
-[ext_resource type="Script" path="res://interactable.gd" id="1_bopsm"]
+[ext_resource type="Script" path="res://scripts/interactable.gd" id="1_bopsm"]
 [ext_resource type="LabelSettings" uid="uid://2ko7alo2i30u" path="res://text.tres" id="2_4mqat"]
 
 [node name="Interactable" type="Area2D" node_paths=PackedStringArray("label")]

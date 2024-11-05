@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dchxbx8jb3xy5"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_l7r6t"]
-[ext_resource type="Texture2D" uid="uid://bcteknnitgbnv" path="res://assets/player.png" id="2_1ldfa"]
-[ext_resource type="Script" path="res://interaction_area.gd" id="3_p1yt1"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_l7r6t"]
+[ext_resource type="Texture2D" uid="uid://bcteknnitgbnv" path="res://sprites/player.png" id="2_1ldfa"]
+[ext_resource type="Script" path="res://scripts/interaction_area.gd" id="3_p1yt1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ipowo"]
 radius = 1.0

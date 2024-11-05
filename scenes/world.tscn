@@ -1,30 +1,30 @@
 [gd_scene load_steps=9 format=3 uid="uid://d066rg5b0vbpo"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_qj48g"]
-[ext_resource type="PackedScene" uid="uid://dchxbx8jb3xy5" path="res://player.tscn" id="2_nccbl"]
-[ext_resource type="PackedScene" uid="uid://dot43xvjg0gi8" path="res://dialog.tscn" id="4_6fwde"]
-[ext_resource type="PackedScene" uid="uid://dpoqpjlw5mke2" path="res://level_1.tscn" id="4_nqj4l"]
-[ext_resource type="PackedScene" uid="uid://djefnfiyixdg2" path="res://camera_2d.tscn" id="5_7ckw1"]
-[ext_resource type="PackedScene" uid="uid://c4o5gq36jaerp" path="res://level_2.tscn" id="5_e1jid"]
-[ext_resource type="PackedScene" uid="uid://c4ftpxddp56o4" path="res://level_3.tscn" id="6_xdebc"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_12wyp"]
+[ext_resource type="PackedScene" uid="uid://dot43xvjg0gi8" path="res://scenes/dialog.tscn" id="2_in3gb"]
+[ext_resource type="PackedScene" uid="uid://dchxbx8jb3xy5" path="res://scenes/player.tscn" id="3_t81xj"]
+[ext_resource type="PackedScene" uid="uid://djefnfiyixdg2" path="res://scenes/camera_2d.tscn" id="4_tms7t"]
+[ext_resource type="PackedScene" uid="uid://dpoqpjlw5mke2" path="res://scenes/level_1.tscn" id="5_r5vak"]
+[ext_resource type="PackedScene" uid="uid://c4o5gq36jaerp" path="res://scenes/level_2.tscn" id="6_ecje3"]
+[ext_resource type="PackedScene" uid="uid://c4ftpxddp56o4" path="res://scenes/level_3.tscn" id="7_0mcsx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hasxv"]
 polygon = PackedVector2Array(-3, -2, -2, -2, -2, -3, 2, -3, 2, -2, 3, -2, 3, 2, 2, 2, 2, 3, -2, 3, -2, 2, -3, 2)
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_qj48g")
+script = ExtResource("1_12wyp")
 clear_color = Color(0.133333, 0.12549, 0.203922, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Dialog" parent="CanvasLayer" instance=ExtResource("4_6fwde")]
+[node name="Dialog" parent="CanvasLayer" instance=ExtResource("2_in3gb")]
 visible = false
 
 [node name="Label" parent="CanvasLayer/Dialog/VBoxContainer" index="1"]
 text = ""
 
-[node name="Player" parent="." node_paths=PackedStringArray("starting_room", "dialog_label", "dialog") instance=ExtResource("2_nccbl")]
+[node name="Player" parent="." node_paths=PackedStringArray("starting_room", "dialog_label", "dialog") instance=ExtResource("3_t81xj")]
 y_sort_enabled = true
 position = Vector2(4, 4)
 friction = 0.2
@@ -32,16 +32,16 @@ starting_room = NodePath("../Level 1")
 dialog_label = NodePath("../CanvasLayer/Dialog/VBoxContainer/Label")
 dialog = NodePath("../CanvasLayer/Dialog")
 
-[node name="Camera2D" parent="Player" instance=ExtResource("5_7ckw1")]
+[node name="Camera2D" parent="Player" instance=ExtResource("4_tms7t")]
 zoom = Vector2(8, 8)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Player"]
 occluder = SubResource("OccluderPolygon2D_hasxv")
 occluder_light_mask = 2
 
-[node name="Level 1" parent="." instance=ExtResource("4_nqj4l")]
+[node name="Level 1" parent="." instance=ExtResource("5_r5vak")]
 
-[node name="Level 2" parent="." instance=ExtResource("5_e1jid")]
+[node name="Level 2" parent="." instance=ExtResource("6_ecje3")]
 visible = false
 position = Vector2(104, 0)
 
@@ -49,7 +49,7 @@ position = Vector2(104, 0)
 destination = NodePath("../../../Level 1")
 destination_door = NodePath("../../../Level 1/Objects/Door")
 
-[node name="Level 3" parent="." instance=ExtResource("6_xdebc")]
+[node name="Level 3" parent="." instance=ExtResource("7_0mcsx")]
 visible = false
 position = Vector2(104, 80)
 

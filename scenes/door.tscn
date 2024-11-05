@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxqlvhu11vuwh"]
 
-[ext_resource type="Script" path="res://door.gd" id="1_3s2h5"]
-[ext_resource type="PackedScene" uid="uid://d1impaw7i5ffl" path="res://interactable.tscn" id="1_gh51r"]
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_3s2h5"]
+[ext_resource type="PackedScene" uid="uid://d1impaw7i5ffl" path="res://scenes/interactable.tscn" id="1_gh51r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wbugs"]
 radius = 4.0

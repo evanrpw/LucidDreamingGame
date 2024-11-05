@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=4 uid="uid://c4o5gq36jaerp"]
 
 [ext_resource type="TileSet" uid="uid://dnsbxrcfbqv08" path="res://tileset.tres" id="1_bf1sl"]
-[ext_resource type="PackedScene" uid="uid://bt4jtdmq0g0ib" path="res://sign.tscn" id="3_qtbuj"]
-[ext_resource type="PackedScene" uid="uid://cxqlvhu11vuwh" path="res://door.tscn" id="4_srrcp"]
+[ext_resource type="PackedScene" uid="uid://bt4jtdmq0g0ib" path="res://scenes/sign.tscn" id="3_qtbuj"]
+[ext_resource type="PackedScene" uid="uid://cxqlvhu11vuwh" path="res://scenes/door.tscn" id="4_srrcp"]
 
 [node name="Level 2" type="Node2D"]
 y_sort_enabled = true

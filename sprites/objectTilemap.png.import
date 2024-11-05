@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b77skug8b5ok8"
-path="res://.godot/imported/terrainTilemap.png-b1d2b3e6676c23a6002137ded36279e4.ctex"
+uid="uid://dlb6hlpvyk3nb"
+path="res://.godot/imported/objectTilemap.png-fb82e73cb71d56b5e5247979ae918ea8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrainTilemap.png"
-dest_files=["res://.godot/imported/terrainTilemap.png-b1d2b3e6676c23a6002137ded36279e4.ctex"]
+source_file="res://sprites/objectTilemap.png"
+dest_files=["res://.godot/imported/objectTilemap.png-fb82e73cb71d56b5e5247979ae918ea8.ctex"]
 
 [params]
 

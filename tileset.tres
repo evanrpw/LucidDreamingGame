@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=11 format=3 uid="uid://dnsbxrcfbqv08"]
 
-[ext_resource type="Texture2D" uid="uid://b77skug8b5ok8" path="res://assets/terrainTilemap.png" id="1_57a0j"]
-[ext_resource type="Texture2D" uid="uid://dlb6hlpvyk3nb" path="res://assets/objectTilemap.png" id="2_fn7h0"]
+[ext_resource type="Texture2D" uid="uid://b77skug8b5ok8" path="res://sprites/terrainTilemap.png" id="1_57a0j"]
+[ext_resource type="Texture2D" uid="uid://dlb6hlpvyk3nb" path="res://sprites/objectTilemap.png" id="2_fn7h0"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eqdoy"]
 polygon = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)

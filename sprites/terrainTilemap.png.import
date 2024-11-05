@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sx1ik0hncdtr"
-path="res://.godot/imported/light.png-87539b10c4b4cebc046b6b91ffea6f69.ctex"
+uid="uid://b77skug8b5ok8"
+path="res://.godot/imported/terrainTilemap.png-0d82d0f675c1515670d909cfb073e5b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/light.png"
-dest_files=["res://.godot/imported/light.png-87539b10c4b4cebc046b6b91ffea6f69.ctex"]
+source_file="res://sprites/terrainTilemap.png"
+dest_files=["res://.godot/imported/terrainTilemap.png-0d82d0f675c1515670d909cfb073e5b4.ctex"]
 
 [params]
 

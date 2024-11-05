@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=4 uid="uid://dpoqpjlw5mke2"]
 
-[ext_resource type="PackedScene" uid="uid://bt4jtdmq0g0ib" path="res://sign.tscn" id="3_2q4go"]
-[ext_resource type="PackedScene" uid="uid://cxqlvhu11vuwh" path="res://door.tscn" id="3_fwcif"]
+[ext_resource type="PackedScene" uid="uid://bt4jtdmq0g0ib" path="res://scenes/sign.tscn" id="3_2q4go"]
+[ext_resource type="PackedScene" uid="uid://cxqlvhu11vuwh" path="res://scenes/door.tscn" id="3_fwcif"]
 [ext_resource type="TileSet" uid="uid://dnsbxrcfbqv08" path="res://tileset.tres" id="3_sg1qe"]
-[ext_resource type="Texture2D" uid="uid://sx1ik0hncdtr" path="res://assets/light.png" id="4_2uf06"]
-[ext_resource type="PackedScene" uid="uid://c6j3wg2xgiwd5" path="res://npc.tscn" id="5_5ww28"]
+[ext_resource type="Texture2D" uid="uid://sx1ik0hncdtr" path="res://sprites/light.png" id="4_2uf06"]
+[ext_resource type="PackedScene" uid="uid://c6j3wg2xgiwd5" path="res://scenes/npc.tscn" id="5_5ww28"]
 
 [node name="Level 1" type="Node2D"]
 y_sort_enabled = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dot43xvjg0gi8"]
 
-[ext_resource type="Texture2D" uid="uid://bcteknnitgbnv" path="res://assets/player.png" id="1_fxdgs"]
+[ext_resource type="Texture2D" uid="uid://bcteknnitgbnv" path="res://sprites/player.png" id="1_fxdgs"]
 [ext_resource type="LabelSettings" uid="uid://c42r4b8ucs6tm" path="res://dialogtext.tres" id="2_ybmvr"]
 
 [node name="Dialog" type="PanelContainer"]

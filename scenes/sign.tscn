@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bt4jtdmq0g0ib"]
 
-[ext_resource type="Script" path="res://sign.gd" id="1_txg7p"]
+[ext_resource type="Script" path="res://scripts/sign.gd" id="1_txg7p"]
 [ext_resource type="LabelSettings" uid="uid://2ko7alo2i30u" path="res://text.tres" id="2_0at75"]
-[ext_resource type="PackedScene" uid="uid://d1impaw7i5ffl" path="res://interactable.tscn" id="2_o36ag"]
+[ext_resource type="PackedScene" uid="uid://d1impaw7i5ffl" path="res://scenes/interactable.tscn" id="2_o36ag"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wbugs"]
 radius = 4.0
